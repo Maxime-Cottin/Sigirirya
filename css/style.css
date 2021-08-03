@@ -30,6 +30,7 @@ img {
    height: 700px;
    background-image: url(/res/brian-kyed-8NpelZe-EzM-unsplash.jpg);
    background-size: cover;
+   background-position-x: center;
    display: flex;
    flex-direction: column;
    justify-content: center;
@@ -55,12 +56,16 @@ img {
 
 #section2 {
    background-color : rgba(255, 255, 255, 30%);
-   display: grid;
-   grid-template-columns: 1fr 1fr;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: center;
 }
 
 #section2 > div {
+   width: 50%;
    padding: 40px;
+   width: 450px;
 }
 
 .s2left > h3 {
@@ -110,4 +115,10 @@ footer > p {
    color: whitesmoke;
    font-weight: 200;
    font-size: 12px;
+}
+
+@media screen and (max-width : 768px) {
+   #section1 , #section2 , #section3 {
+      width: 100vw;
+   }
 }
